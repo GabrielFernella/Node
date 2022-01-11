@@ -1,3 +1,5 @@
+import { inject, injectable } from "tsyringe";
+
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
@@ -5,11 +7,18 @@ interface IRequest {
     description: string;
 }
 
+// para que essa classe possa  utilizar injeção de dependencia, basta vc adicionar esse notation
+@injectable()
 class CreateCategoryUseCase {
-    constructor(private categoriesRepository: ICategoriesRepository) {}
+    // Instanciando a propriedade da repository com o tsyringe
+    // Assim essa ferramenta vai ficar gerenciando a instancia do meu repository
+    constructor(
+        @inject("CategoriesRepository")
+        private categoriesRepository: ICategoriesRepository
+    ) {}
 
-    execute({ name, description }: IRequest): void {
-        const category = this.categoriesRepository.findByName(name);
+    async execute({ name, description }: IRequest): Promise<void> {
+        const category = await this.categoriesRepository.findByName(name);
 
         if (category) {
             throw new Error("Category has already been exists");

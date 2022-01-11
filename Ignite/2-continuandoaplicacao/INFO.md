@@ -5,7 +5,7 @@
 4. yarn add swagger-ui-express && yarn add @types/swagger-ui-express -D
 5. yarn add typeorm reflect-metadata (biblioteca necessário para ler as querys do banco)
 6. yarn add pg (driver do banco de dados)
-7. 
+7. yarn add tsyringe
   
 
 # Commands

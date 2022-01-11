@@ -1,10 +1,12 @@
+import "reflect-metadata";
 import express from "express";
 import swaggerUi from "swagger-ui-express";
+import "./database"; // importando as configurações do banco de dados
+
+import "./shared/container"; // buscando o index do tsyringe para realizar as instancias
 
 import { router } from "./routes";
 import swaggerfile from "./swagger.json";
-
-import "./database"; // importando as configurações do banco de dados
 
 const app = express();
 app.use(express.json());
