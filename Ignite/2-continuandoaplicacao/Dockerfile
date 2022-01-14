@@ -2,8 +2,9 @@ FROM node
 
 WORKDIR /usr/app 
 
-RUN yarn global add nodemon
-RUN yarn global add ts-node
+#RUN yarn global add nodemon
+#RUN yarn add bcrypt
+#RUN yarn global add ts-node
 
 COPY package.json ./
 
@@ -13,4 +14,4 @@ COPY . .
 
 EXPOSE 3333
 
-CMD ["npm","run","dev"]
+#CMD ["npm","run","dev"]
