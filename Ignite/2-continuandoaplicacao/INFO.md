@@ -8,6 +8,7 @@
 7. yarn add tsyringe
 8. yarn add bcrypt && yarn add @types/bcrypt -D
 9. yarn add jsonwebtoken && yarn add @types/jsonwebtoken -D
+10. yarn add express-async-errors (tratativa de erros para o express)
   
 
 # Commands
