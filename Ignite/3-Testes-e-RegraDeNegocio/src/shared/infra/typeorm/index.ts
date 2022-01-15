@@ -1,6 +1,16 @@
-import { createConnections } from "typeorm";
+import { Connection, createConnection, getConnectionOptions } from "typeorm";
 
-createConnections();
+// createConnections();
+
+export default async (): Promise<Connection> => {
+    const defaultOptions = await getConnectionOptions();
+
+    return createConnection(
+        Object.assign(defaultOptions, {
+            host: "localhost",
+        })
+    );
+};
 
 /* import { createConnection, getConnectionOptions } from "typeorm";
 

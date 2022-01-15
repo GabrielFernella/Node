@@ -5,6 +5,9 @@ import { CreateCategoryController } from "@modules/cars/useCases/createCategory/
 import { ImportCategoryController } from "@modules/cars/useCases/importCategory/ImportCategoryController";
 import { ListCategoriesController } from "@modules/cars/useCases/listCategories/ListCategoriesController";
 
+import { ensureAdmin } from "../middlewares/ensureAdmin";
+import { ensureAuthenticated } from "../middlewares/ensureAtuhenticated";
+
 const categoriesRoutes = Router();
 
 const createCategoryController = new CreateCategoryController();
@@ -16,6 +19,10 @@ const upload = multer({
 });
 
 categoriesRoutes.get("/", listCategoriesController.handle);
+
+// Rotas para userAdmin
+categoriesRoutes.use(ensureAuthenticated);
+categoriesRoutes.use(ensureAdmin);
 
 categoriesRoutes.post("/", createCategoryController.handle);
 
