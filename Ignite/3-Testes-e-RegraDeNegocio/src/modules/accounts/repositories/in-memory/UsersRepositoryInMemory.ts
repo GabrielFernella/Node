@@ -1,5 +1,6 @@
+import User from "@modules/accounts/infra/typeorm/entities/User";
+
 import { ICreateUserDTO } from "../../dtos/ICreateUser";
-import User from "../../entities/User";
 import { IUsersRepository } from "../IUsersRepository";
 
 // Quando criamos um repositório fake, fazemos com um array vazio e os mesmos métodos que possuímos em nosso repository
