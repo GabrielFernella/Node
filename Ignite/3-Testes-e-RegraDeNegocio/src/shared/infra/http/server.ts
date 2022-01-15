@@ -2,13 +2,14 @@ import "reflect-metadata";
 import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors"; // apenas importando já garante que essa lib funcione
 import swaggerUi from "swagger-ui-express";
-import "./database"; // importando as configurações do banco de dados
+import "@shared/infra/typeorm"; // importando as configurações do banco de dados
 
-import "./shared/container"; // buscando o index do tsyringe para realizar as instancias
+import "@shared/container"; // buscando o index do tsyringe para realizar as instancias
 
-import { AppError } from "./errors/AppError";
+import { AppError } from "@shared/errors/AppError";
+
+import swaggerfile from "../../../swagger.json";
 import { router } from "./routes";
-import swaggerfile from "./swagger.json";
 
 const app = express();
 app.use(express.json());
