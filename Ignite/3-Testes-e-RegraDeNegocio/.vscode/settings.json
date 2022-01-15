@@ -4,7 +4,7 @@
     "yarn.lock": true,
     "yarn-error.log": true,
     ".eslintignore": true,
-    ".eslintrc.json": true,
+    //".eslintrc.json": true,
     ".editorconfig": true,
     "prettier.config.js": true,
     "package-lock.json": true

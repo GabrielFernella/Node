@@ -11,6 +11,7 @@
 10. yarn add express-async-errors (tratativa de erros para o express)
 11. yarn add jest @types/jest -D
 12. yarn add ts-jest -D
+13. yarn add tsconfig-paths -D (Biblioteca para utilizar os atalhos do paths) (Melhor usar ele para todos os projetos)
   
 
 # Commands
@@ -41,3 +42,20 @@
 √ Automatically clear mock calls, instances and results before every test? ... yes
     
 # Commands 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# BKP
+//"bkp22": "nodemon src/index.ts",
+    //"bkp": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
