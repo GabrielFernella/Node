@@ -22,6 +22,7 @@ export class CreateCarImages1642393254486 implements MigrationInterface {
                     {
                         name: "created_at",
                         type: "timestamp",
+                        default: "now()",
                     },
                 ],
                 foreignKeys: [
