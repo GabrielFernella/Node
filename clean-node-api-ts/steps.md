@@ -9,6 +9,8 @@
   @typescript-eslint/eslint-plugin@^5.0.0 \
   eslint-config-standard-with-typescript@latest
 3. npm i -D jest @types/jest ts-jest
+4. npm i validator
+5. npm i @types/validator -D
 
 
 
