@@ -11,6 +11,8 @@
 3. npm i -D jest @types/jest ts-jest
 4. npm i validator
 5. npm i @types/validator -D
+6. npm i bcrypt
+7. npm i @types/bcrypt -D
 
 
 
